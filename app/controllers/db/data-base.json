@@ -1,0 +1,30 @@
+[
+    {
+        "id": "NA",
+        "Last_ID": 6
+    },
+    {
+        "id": 1,
+        "nombre": "Juan P\u00e9rez",
+        "edad": 32,
+        "correo": "juan.perez@gmail.com",
+        "telefono": "555-1234",
+        "direccion": "Calle Falsa 123, Ciudad",
+        "ciudad": "Ciudad",
+        "pais": "M\u00e9xico",
+        "ocupacion": "Ingeniero",
+        "estado_civil": "Soltero"
+    },
+    {
+        "id": 4,
+        "nombre": "Javier Rodr\u00edguez",
+        "edad": 41,
+        "correo": "javier.rodriguez@yahoo.com",
+        "telefono": "555-7890",
+        "direccion": "Calle Sol 202, Ciudad",
+        "ciudad": "Ciudad",
+        "pais": "Colombia",
+        "ocupacion": "Arquitecto",
+        "estado_civil": "Casado"
+    }
+]

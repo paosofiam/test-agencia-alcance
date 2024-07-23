@@ -1,0 +1,38 @@
+{
+    "1": {
+        "id": 2,
+        "nombre": "Mar\u00eda Torres",
+        "edad": 33,
+        "correo": "claudia.torres@yahoo.com",
+        "telefono": "555-9013",
+        "direccion": "Calle Meteoro 505, Ciudad",
+        "ciudad": "Ciudad",
+        "pais": "Ecuador",
+        "ocupacion": "Dise\u00f1adora",
+        "estado_civil": "Soltera"
+    },
+    "2": {
+        "id": 3,
+        "nombre": "Carlos S\u00e1nchez",
+        "edad": 45,
+        "correo": "carlos.sanchez@hotmail.com",
+        "telefono": "555-9012",
+        "direccion": "Calle Luna 789, Ciudad",
+        "ciudad": "Ciudad",
+        "pais": "Argentina",
+        "ocupacion": "Abogado",
+        "estado_civil": "Divorciado"
+    },
+    "4": {
+        "id": 5,
+        "nombre": "Mario Rodr\u00edguez",
+        "edad": 41,
+        "correo": "javier.rodriguez@yahoo.com",
+        "telefono": "555-7890",
+        "direccion": "Calle Sol 202, Ciudad",
+        "ciudad": "Ciudad",
+        "pais": "Colombia",
+        "ocupacion": "Arquitecto",
+        "estado_civil": "Casado"
+    }
+}

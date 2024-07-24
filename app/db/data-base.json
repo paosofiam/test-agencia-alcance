@@ -26,5 +26,17 @@
         "pais": "Colombia",
         "ocupacion": "Arquitecto",
         "estado_civil": "Casado"
+    },
+    {
+        "id": 5,
+        "nombre": "Mario Rodr\u00edguez",
+        "edad": 41,
+        "correo": "javier.rodriguez@yahoo.com",
+        "telefono": "555-7890",
+        "direccion": "Calle Sol 202, Ciudad",
+        "ciudad": "Ciudad",
+        "pais": "Colombia",
+        "ocupacion": "Arquitecto",
+        "estado_civil": "Casado"
     }
 ]

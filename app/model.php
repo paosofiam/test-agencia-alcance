@@ -1,7 +1,4 @@
 <?php
-$dataBase = 'db/data-base.json';
-$recycleBin = 'db/recycle-bin.json';
-
 $newUser = array(
     "id"=> null,
     "nombre"=> "Panchita Torres",
@@ -15,7 +12,6 @@ $newUser = array(
     "estado_civil"=> "Soltera"
 );
 
-move(4,$recycleBin,$dataBase);
 /*CRUD*/
 function index($dbPath){//Shows the list with all items
     $jsonString = file_get_contents($dbPath);
@@ -23,11 +19,7 @@ function index($dbPath){//Shows the list with all items
     return $usersArray;
 }
 
-function create(){//Shows a form to create a new item
-
-}
-
-function store($db,$newUserData){//Saves the new item in the db
+function store($db,$newUserData){//Saves the new item in the db ////////////////////////////
     $allUsers = index($db);
     $allUsers[0]["Last_ID"] = $allUsers[0]["Last_ID"]+1;
     $newUserData['id'] = $allUsers[0]["Last_ID"];
@@ -38,15 +30,11 @@ function show($id,$db){//Shows a single item
     $allUsers = index($db);
     $index = findID($id,$allUsers);
     if($index != false){
-        var_dump($allUsers[$index]);
+        return $allUsers[$index];
     }
 }
 
-function edit(){//Shows a form to edit an item
-
-}
-
-function update($id,$data,$db){//Updates a specific item
+function update($id,$data,$db){//Updates a specific item  ///////////////////////////////////
     $allUsers = index($db);
     $index = findID($id,$allUsers);
     if($index != false){

@@ -95,5 +95,7 @@
             </div>
         </div>
     </div>
+    <script src="assets/js/controller.js"></script>
+    <button type="button" onclick="restore(5)">show1</button>
 </body>
 </html>

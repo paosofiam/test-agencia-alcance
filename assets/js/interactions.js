@@ -44,7 +44,7 @@ function formPanelEditMode(mode,ID){
 }
 /*Modal Delete*/
 function areYouSure(ID){
-    document.getElementById("deleteButton").setAttribute('onclick','deleteRB('+ID+')');
+    document.getElementById("deleteButton").setAttribute('onclick','recycle('+ID+')');
 }
 
 function notSure(){

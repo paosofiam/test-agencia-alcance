@@ -8,13 +8,7 @@
 <body>
     <header></header>
     <main>
-        <ul>
-            <li>
-                <span>ID</span>
-                <span>Nombre</span>
-                <button type="button">Restaurar Usuario</button>
-                <button type="button">Eliminar Permanentemente</button>
-            </li>
+        <ul id="dynamicList">
         </ul>
     </main>
     <footer></footer>
@@ -27,5 +21,9 @@
             </div>
         </div>
     </div>
+    <script src="assets/js/CRUD.js"></script>
+    <script src="assets/js/interactions.js"></script>
+    <script src="assets/js/validations.js"></script>
+    <script>getAllRB();</script>
 </body>
 </html>

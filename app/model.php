@@ -2,20 +2,6 @@
 
 $dataBase = 'db/data-base.json';
 $recycleBin = 'db/recycle-bin.json';
-
-/* $newUser = array(
-    "id"=> null,
-    "nombre"=> "Panchita Torres",
-    "edad"=> 85,
-    "correo"=> "claudia.torres@yahoo.com",
-    "telefono"=> "555-9013",
-    "direccion"=> "Calle Meteoro 505, Ciudad",
-    "ciudad"=> "Ciudad",
-    "pais"=> "Ecuador",
-    "ocupacion"=> "Diseñadora",
-    "estado_civil"=> "Soltera"
-); */
-
 /*CRUD*/
 function index($dbPath){//Shows the list with all items
     $jsonString = file_get_contents($dbPath);
@@ -59,7 +45,8 @@ function destroy($id,$db){//Deletes a specific item
 function move($id,$origin,$destiny){//Moves a specific item between db's
     $allUsersOrigin = index($origin);
     $index = findID($id,$allUsersOrigin);
-    if($index != false){
+    echo $index;
+    if($index !== false){
         $user = $allUsersOrigin[$index];
         $allUsersDestiny = index($destiny);
         add($allUsersDestiny,$user,$destiny);
@@ -71,11 +58,11 @@ function findID($id,$array){
     $foundID = false;
     foreach($array as $key => $user){
         if($user["id"] == $id){
-            $foundID = $key;
+            $foundID = (int)$key;
             break;
         }
     }
-    return $foundID;
+    return (int)$foundID;
 }
 
 function add($array,$newElement,$db){

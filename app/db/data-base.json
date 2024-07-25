@@ -4,30 +4,6 @@
         "Last_ID": 11
     },
     {
-        "nombre": "Mario Lara",
-        "edad": "85",
-        "correo": "claudia.torres@yahoo.com",
-        "telefono": "555-9013",
-        "direccion": "Calle Meteoro 505, Ciudad",
-        "ciudad": "Ciudad",
-        "pais": "Ecuador",
-        "ocupacion": "Dise\u00f1adora",
-        "estado_civil": "Soltera",
-        "id": 1
-    },
-    {
-        "id": 4,
-        "nombre": "Javier Rodr\u00edguez",
-        "edad": 41,
-        "correo": "javier.rodriguez@yahoo.com",
-        "telefono": "555-7890",
-        "direccion": "Calle Sol 202, Ciudad",
-        "ciudad": "Ciudad",
-        "pais": "Colombia",
-        "ocupacion": "Arquitecto",
-        "estado_civil": "Casado"
-    },
-    {
         "id": 5,
         "nombre": "Mario Rodr\u00edguez",
         "edad": 41,
@@ -40,8 +16,8 @@
         "estado_civil": "Casado"
     },
     {
-        "id": 7,
-        "nombre": "Claudia Torres",
+        "id": 2,
+        "nombre": "Mar\u00eda Torres",
         "edad": 33,
         "correo": "claudia.torres@yahoo.com",
         "telefono": "555-9013",
@@ -52,39 +28,15 @@
         "estado_civil": "Soltera"
     },
     {
-        "id": 8,
-        "nombre": "Claudia Torres",
-        "edad": 33,
-        "correo": "claudia.torres@yahoo.com",
-        "telefono": "555-9013",
-        "direccion": "Calle Meteoro 505, Ciudad",
+        "id": 3,
+        "nombre": "Carlos S\u00e1nchez",
+        "edad": 45,
+        "correo": "carlos.sanchez@hotmail.com",
+        "telefono": "555-9012",
+        "direccion": "Calle Luna 789, Ciudad",
         "ciudad": "Ciudad",
-        "pais": "Ecuador",
-        "ocupacion": "Dise\u00f1adora",
-        "estado_civil": "Soltera"
-    },
-    {
-        "id": 9,
-        "nombre": "Claudia Torres",
-        "edad": 85,
-        "correo": "claudia.torres@yahoo.com",
-        "telefono": "555-9013",
-        "direccion": "Calle Meteoro 505, Ciudad",
-        "ciudad": "Ciudad",
-        "pais": "Ecuador",
-        "ocupacion": "Dise\u00f1adora",
-        "estado_civil": "Soltera"
-    },
-    {
-        "id": 11,
-        "nombre": "Paola",
-        "edad": "25",
-        "correo": "hello@paosofiam.com",
-        "telefono": "8115905585",
-        "direccion": "Manuel P\u00e9rez Trevi\u00f1o 892-8",
-        "ciudad": "Saltillo",
-        "pais": "M\u00e9xico",
-        "ocupacion": "Desarrolladora",
-        "estado_civil": "Coah."
+        "pais": "Argentina",
+        "ocupacion": "Abogado",
+        "estado_civil": "Divorciado"
     }
 ]

@@ -1,8 +1,6 @@
 /*CRUD*/
 const url = 'app/controller.php';
 
-getAllDB();
-
 function saveDB(data){//Saves the new item in the db
     var newUser = JSON.stringify(data);
     info = JSON.stringify({'action': 'saveDB', 'data': newUser});
@@ -54,22 +52,31 @@ function getAllRB(){//Shows the list with all items
         headers: {'Content-Type': 'application/json; charset=utf-8'}
     })
         .then((resp) => { return resp.json() })
-            .then(function (resp) {console.log(resp)})
+            .then(function (response) {
+                var content = '';
+                response.forEach(function (user) {//Joins all the data recived by the petition in a single string to be used
+                    content += '<li><span>' + user.id + '</span><span>' + user.nombre + '</span><button type="button" onclick="restore('+user.id+')">Restaurar Usuario</button><button type="button" onclick="deleteRB('+user.id+')">Eliminar Permanentemente</button></li>';
+                });
+                document.getElementById("dynamicList").innerHTML = content;
+            })
 }
 /*Logic Deletion*/
 function recycle(ID){//Moves a specific item from db to recycle bin
     var info = JSON.stringify({'action': 'recycle', 'ID': ID});
     petition(info);
+    window.location.reload();
 }
 
 function restore(ID){//Restores a specific item from recycle bin to db
     var info = JSON.stringify({'action': 'restore', 'ID': ID});
     petition(info);
+    window.location.reload();
 }
 
 function deleteRB(ID){//Deletes a specific item
     var info = JSON.stringify({'action': 'delete', 'ID': ID});
     petition(info);
+    window.location.reload();
 }
 /*Others*/
 function petition(info){

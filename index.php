@@ -16,87 +16,86 @@
         <button type="button"><img src="" alt="Menú de Opciones"></button>
     </header>
     <main>
+        <button type="button" onclick="formPanelMode(create)">Crear nuevo Usuario</button>
         <table>
             <thead>
                 <tr>
-                <th>ID</th>
-                <th>Nombre</th>
-                <th>Correo Electrónico</th>
-                <th>Número Telefónico</th>
-                <th>&nbsp;</th>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Correo Electrónico</th>
+                    <th>Número Telefónico</th>
+                    <th>&nbsp;</th>
                 </tr>
             </thead>
-            <tbody>
-            <tr>
-                <td>Id</td>
-                <td>Nombre</td>
-                <td>Correo Electrónico</td>
-                <td>Número Telefónico</td>
-                <td><button type="button">Ver más</button></td>
-            </tr>
+            <tbody id="dynamicTable">
             </tbody>
         </table>
     </main>
     <footer></footer>
     <div>
-        <form action="">
-            <h3><!-- Agregar Usuario/ID: --></h3>
+        <form id="userOptions" action="">
+            <h3 id="input0"><!-- Agregar Usuario/Usuario: --></h3>
             <label for="">
                 <span>Nombre:</span>
-                <input type="text">
+                <input id="input1" type="text" onblur="validateInput1(1)" oninput="validateInput2(1)" required autocomplete="name">
+                <span id="warning1"></span>
             </label>
             <label for="">
                 <span>Edad:</span>
-                <input type="text">
+                <input id="input2" type="number" onblur="validateInput1(2)" oninput="validateInput2(2)" required autocomplete="on">
+                <span id="warning2"></span>
             </label>
             <label for="">
                 <span>Correo Electrónico:</span>
-                <input type="text">
+                <input id="input3" type="email" onblur="validateEmail()" oninput="validateInput2(3)" required autocomplete="email">
+                <span id="warning3"></span>
             </label>
             <label for="">
                 <span>Teléfono:</span>
-                <input type="text">
+                <input id="input4" type="tel" onblur="validateInput1(4)" oninput="validateInput2(4)" required autocomplete="tel">
+                <span id="warning4"></span>
             </label>
             <label for="">
                 <span>Dirección:</span>
-                <input type="text">
+                <input id="input5" type="text" onblur="validateInput1(5)" oninput="validateInput2(5)" required autocomplete="street-address">
+                <span id="warning5"></span>
             </label>
             <label for="">
                 <span>Ciudad:</span>
-                <input type="text">
+                <input id="input6" type="text" onblur="validateInput1(6)" oninput="validateInput2(6)" required autocomplete="address-level2">
+                <span id="warning6"></span>
             </label>
             <label for="">
                 <span>País:</span>
-                <input type="text">
+                <input id="input7" type="text" onblur="validateInput1(7)" oninput="validateInput2(7)" required autocomplete="country-name">
+                <span id="warning7"></span>
             </label>
             <label for="">
                 <span>Ocupación:</span>
-                <input type="text">
+                <input id="input8" type="text" onblur="validateInput1(8)" oninput="validateInput2(8)" required autocomplete="organization-title">
+                <span id="warning8"></span>
             </label>
             <label for="">
                 <span>Estado Civil:</span>
-                <input type="text">
+                <input id="input9" type="text" onblur="validateInput1(9)" oninput="validateInput2(9)" required autocomplete="on">
+                <span id="warning9"></span>
             </label>
-            <div>
-                <button type="button">Editar</button>
-                <button type="button">Eliminar</button>
-                <button type="button">Guardar</button>
-                <button type="button">Cancelar</button>
-                <button type="button">Cerrar</button>
+            <div id="formPanel">
             </div>
+            <span id="warning10"></span>
         </form>
     </div>
     <div>
         <div>
             <span>¿Deseas enviar este usuario a la papelera de reciclaje?</span>
             <div>
-                <button type="button">Eliminar</button>
+                <button id="deleteButton" type="button" onclick="">Eliminar</button>
                 <button type="button">Cancelar</button>
             </div>
         </div>
     </div>
     <script src="assets/js/CRUD.js"></script>
     <script src="assets/js/interactions.js"></script>
-    <button type="button" onclick="showAll()">show1</button>
+    <script src="assets/js/validations.js"></script>
 </body>
 </html>

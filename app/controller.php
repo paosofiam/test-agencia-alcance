@@ -35,11 +35,13 @@ if($_POST['action']){
 function saveDB($data){//Saves the new item in the db
     $newUser = json_decode($data,true);
     store($newUser,'db/data-base.json');
+    echo 'Saved';
 }
 
 function editDB($id,$data){//Updates a specific item
     $newUser = json_decode($data,true);
     update($id,$newUser,'db/data-base.json');
+    echo 'Saved';
 }
 
 function getAllDB(){
@@ -59,13 +61,15 @@ function getAllRB(){
 
 function recycle($id){
     move($id,'db/data-base.json','db/recycle-bin.json');
+    echo 'Recycled';
 }
 
 function restore($id){
     move($id,'db/recycle-bin.json','db/data-base.json');
-    echo 'success';
+    echo 'Restored';
 }
 
 function delete($id){
     destroy($id,'db/recycle-bin.json');
+    echo 'Deleted';
 }

@@ -1,8 +1,12 @@
 <?php
-$newUser = array(
+
+$dataBase = 'db/data-base.json';
+$recycleBin = 'db/recycle-bin.json';
+
+/* $newUser = array(
     "id"=> null,
     "nombre"=> "Panchita Torres",
-    "edad"=> 33,
+    "edad"=> 85,
     "correo"=> "claudia.torres@yahoo.com",
     "telefono"=> "555-9013",
     "direccion"=> "Calle Meteoro 505, Ciudad",
@@ -10,7 +14,7 @@ $newUser = array(
     "pais"=> "Ecuador",
     "ocupacion"=> "Diseñadora",
     "estado_civil"=> "Soltera"
-);
+); */
 
 /*CRUD*/
 function index($dbPath){//Shows the list with all items
@@ -19,7 +23,7 @@ function index($dbPath){//Shows the list with all items
     return $usersArray;
 }
 
-function store($db,$newUserData){//Saves the new item in the db ////////////////////////////
+function store($newUserData,$db){//Saves the new item in the db ////////////////////////////
     $allUsers = index($db);
     $allUsers[0]["Last_ID"] = $allUsers[0]["Last_ID"]+1;
     $newUserData['id'] = $allUsers[0]["Last_ID"];

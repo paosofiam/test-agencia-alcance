@@ -95,7 +95,8 @@
             </div>
         </div>
     </div>
-    <script src="assets/js/controller.js"></script>
-    <button type="button" onclick="restore(5)">show1</button>
+    <script src="assets/js/CRUD.js"></script>
+    <script src="assets/js/interactions.js"></script>
+    <button type="button" onclick="showAll()">show1</button>
 </body>
 </html>

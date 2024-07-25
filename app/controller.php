@@ -1,13 +1,16 @@
 <?php
 require_once 'model.php';
 
-$dataBase = 'db/data-base.json';
-$recycleBin = 'db/recycle-bin.json';
-
 $_POST = json_decode(file_get_contents('php://input'),true);
 
 if($_POST['action']){
     switch ($_POST['action']){
+        case 'saveDB':
+            saveDB($_POST['data']);
+            break;
+        case 'editDB':
+            editDB($_POST['ID'],$_POST['data']);
+            break;
         case 'getAllDB':
             getAllDB();
             break;
@@ -28,17 +31,16 @@ if($_POST['action']){
             break;
     }
 }
-/* if($_GET['action']){
-    switch ($_GET['action']){
-        case 'test':
-            test();
-            break;
-        case 'getAll':
-            getAll();
-            break;
-    }
-} */
 
+function saveDB($data){//Saves the new item in the db
+    $newUser = json_decode($data,true);
+    store($newUser,'db/data-base.json');
+}
+
+function editDB($id,$data){//Updates a specific item
+    $newUser = json_decode($data,true);
+    update($id,$newUser,'db/data-base.json');
+}
 
 function getAllDB(){
     $result = index('db/data-base.json');
